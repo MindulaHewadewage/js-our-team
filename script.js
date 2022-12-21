@@ -1,3 +1,5 @@
+const target = document.getElementById('target')
+
 const informations =
     {
         workers:[
@@ -10,4 +12,5 @@ const informations =
         ]
     }
 
-console.log(informations.workers);
+console.table(informations.workers);
+// target.innerHTML= informations['workers'];
