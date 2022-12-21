@@ -1,4 +1,5 @@
-const target = document.getElementById('target')
+const workersContent = document.getElementById('row')
+
 
 const informations =
     {
@@ -12,5 +13,21 @@ const informations =
         ]
     }
 
-console.table(informations.workers);
-// target.innerHTML= informations['workers'];
+// funzione di creare la struttura html
+const WorkerStructure =() => {
+    let Content ='';
+    for(let workers in informations){
+        Content += 
+        `
+        <div class="col-4">
+        <div class="card">
+            <div class="card-body"><img src="img/${imageUrl}" alt=""></div>
+            <h4 class="card-title">${Name}</h4>
+            <p class="card-text py-3">${role}</p>
+        </div>
+        </div>
+        `
+    }
+
+}
+
