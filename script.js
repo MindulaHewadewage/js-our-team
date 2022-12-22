@@ -7,7 +7,7 @@ const informations =
             {name: 'Walter Gordon', role:'Office Manager', imageUrl:'walter-gordon-office-manager.jpg'},
             {name: 'Angela Lopez', role:'Social Media Manager', imageUrl:'angela-lopez-social-media-manager.jpg'},
             {name: 'Scott Estrada', role:'Developer', imageUrl:'scott-estrada-developer.jpg'},
-            {name: 'Barbara Ramos', role:'Graphic Designer', imageUrl:'barbara-ramos-graèhic-designer.jpg'},
+            {name: 'Barbara Ramos', role:'Graphic Designer', imageUrl:'barbara-ramos-graphic-designer.jpg'},
         ]
     }
 
@@ -23,9 +23,9 @@ let content ='';
         content +=`
         <div class="col-4">
         <div class="card">
-            <div class="card-body"><img src="img/${informations.workers.imageUrl}" alt=""></div>
-            <h4 class="card-title">${informations.name}</h4>
-            <p class="card-text py-3">${informations.role}</p>
+            <div class="card-body"><img src="img/${member.imageUrl}" alt=""></div>
+            <h4 class="card-title">${member.name}</h4>
+            <p class="card-text py-3">${member.role}</p>
         </div>
         </div>
         `;
