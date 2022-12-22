@@ -1,5 +1,3 @@
-const workersContent = document.getElementById('row')
-
 
 const informations =
     {
@@ -13,21 +11,26 @@ const informations =
         ]
     }
 
+    console.table(informations.workers);
+
+const cardStructure = document.getElementById('card-structure');
+let content ='';
+
 // funzione di creare la struttura html
-const WorkerStructure =() => {
-    let Content ='';
-    for(let workers in informations){
-        Content += 
-        `
+    for(let i = 0; i < informations.workers.length; i++){
+        const member = informations.workers[i];
+
+        content +=`
         <div class="col-4">
         <div class="card">
-            <div class="card-body"><img src="img/${imageUrl}" alt=""></div>
-            <h4 class="card-title">${Name}</h4>
-            <p class="card-text py-3">${role}</p>
+            <div class="card-body"><img src="img/${informations.workers.imageUrl}" alt=""></div>
+            <h4 class="card-title">${informations.name}</h4>
+            <p class="card-text py-3">${informations.role}</p>
         </div>
         </div>
-        `
+        `;
+
     }
 
-}
 
+cardStructure.innerHTML = content;
